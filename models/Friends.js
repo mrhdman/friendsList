@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const FriendsSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
+const FriendsSchema = new Schema({
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'users'
   },
   avatar: {
     type: String
